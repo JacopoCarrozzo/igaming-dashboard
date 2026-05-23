@@ -19,8 +19,13 @@
       }
     ],
     "paths": {
-      "@/*": ["./*"]
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
     }
+  }
+}
   },
   "include": [
     "next-env.d.ts",
