@@ -1,20 +1,29 @@
+// src/types/index.ts
+export type GameStatus = 'live' | 'beta' | 'maintenance'
+export type PartnerStatus = 'active' | 'pending' | 'inactive'
+
 export interface Game {
-  id: number;
-  title: string;
-  status: 'Active' | 'Maintenance';
-  rtp: number;  // Return to Player
-  roundsPlayed: number;
+  id: string
+  title: string
+  status: GameStatus
+  category?: string
+  rtp?: number
+  roundsPlayed: number
+  markets?: number | string
+  launchDate?: string
 }
 
 export interface Partner {
-  id: number;
-  name: string;
-  email: string;
-  integrationStatus: 'Connected' | 'Pending' | 'Failed';
+  id: string
+  name: string
+  country?: string
+  status: PartnerStatus
+  gamesCount?: number
+  monthlyRounds?: number
 }
 
 export interface KpiStats {
-  activeGames: number;
-  totalRounds: number;
-  connectedPartners: number;
+  activeGames: number
+  totalRounds: number
+  connectedPartners: number
 }

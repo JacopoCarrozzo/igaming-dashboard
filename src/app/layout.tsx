@@ -1,27 +1,27 @@
-import '@/globals.css';
-import Link from 'next/link';
+// app/layout.tsx
+import './globals.css'
+import { DM_Mono, Syne } from 'next/font/google'
+import Sidebar from '@/components/ui/Sidebar'
+import type { Metadata } from 'next'
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+const syne = Syne({ subsets: ['latin'], variable: '--font-syne' })
+const mono = DM_Mono({ subsets: ['latin'], weight: ['400','500'], variable: '--font-mono' })
+
+export const metadata: Metadata = {
+  title: 'TaDa B2B Portal',
+  description: 'Operator Dashboard',
+}
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body className="flex h-screen bg-gray-50 text-gray-900">
-        <aside className="w-64 bg-slate-900 text-white p-6 flex flex-col">
-          <h2 className="text-xl font-bold mb-10">TaDa Dashboard</h2>
-          <nav className="flex flex-col gap-4">
-            <Link href="/" className="hover:text-blue-400">Overview</Link>
-            <Link href="/games" className="hover:text-blue-400">Games</Link>
-            <Link href="/partners" className="hover:text-blue-400">Partners</Link>
-          </nav>
-        </aside>
-
+    <html lang="en" className={`${syne.variable} ${mono.variable}`}>
+     
+      <body className="flex h-screen bg-[#0a0f1a] text-slate-200 overflow-hidden">
+        <Sidebar />
         <main className="flex-1 overflow-y-auto p-8">
           {children}
         </main>
       </body>
     </html>
-  );
+  )
 }

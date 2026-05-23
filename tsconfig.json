@@ -18,14 +18,10 @@
         "name": "next"
       }
     ],
-    "paths": {
-  "compilerOptions": {
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
     }
-  }
-}
   },
   "include": [
     "next-env.d.ts",
