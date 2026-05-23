@@ -1,4 +1,3 @@
-// src/lib/api.ts
 import { Game, Partner } from '@/types'
 
 const BASE_URL = 'https://jsonplaceholder.typicode.com'
@@ -15,7 +14,6 @@ const CATEGORIES = ['Slot', 'Fishing', 'Crash', 'Bingo', 'Table'] as const
 const COUNTRIES = ['Malta', 'UK', 'Germany', 'Sweden', 'Brazil'] as const
 const PARTNER_STATUSES = ['active', 'active', 'active', 'pending', 'inactive'] as const
 
-// Valore deterministico basato sull'id — non cambia tra richieste
 function seededValue(id: number, multiplier: number) {
   return Math.floor(((id * 9301 + 49297) % 233280) / 233280 * multiplier)
 }

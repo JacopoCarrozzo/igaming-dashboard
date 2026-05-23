@@ -11,8 +11,9 @@ const statusStyles: Record<string, { pill: string; dot: string; label: string }>
   maintenance: { pill: 'bg-slate-500/10 text-slate-500 border border-slate-500/20',       dot: 'bg-slate-500',                              label: 'Maintenance' },
 }
 
-export default async function GameDetailPage({ params }: { params: { id: string } }) {
-  const game = await getGameById(params.id)
+export default async function GameDetailPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params
+  const game = await getGameById(id)
 
   if (!game) notFound()
 
