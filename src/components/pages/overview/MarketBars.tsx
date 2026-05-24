@@ -4,13 +4,13 @@ const MARKETS = [
   { label: 'UK',      pct: 61, accent: 'from-indigo-400 to-violet-400' },
   { label: 'Germany', pct: 47, accent: 'from-amber-400 to-orange-400' },
   { label: 'Sweden',  pct: 38, accent: 'from-rose-400 to-pink-400' },
-  { label: 'Greece',  pct: 22, accent: 'from-slate-500 to-slate-600' },
+  { label: 'Greece',  pct: 22, accent: 'from-blue-400 to-blue-600' },
 ]
 
 export default function MarketBars() {
   return (
     <div className="bg-[#0d1424] border border-[#1e2d45] rounded-xl p-5">
-      <p className="text-[10px] font-bold tracking-[0.12em] uppercase text-slate-600 mb-4">
+      <p className="text-[11px] font-bold tracking-[0.08em] uppercase text-slate-500 mb-4">
         Rounds by Market
       </p>
       <div className="flex flex-col gap-3">
@@ -25,7 +25,7 @@ export default function MarketBars() {
                 style={{ width: `${pct}%` }}
               />
             </div>
-            <span className="text-[11px] font-mono text-slate-600 w-8 text-right shrink-0">
+            <span className="text-[11px] font-semibold text-slate-400 w-8 text-right shrink-0">
               {pct}%
             </span>
           </div>

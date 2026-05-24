@@ -14,19 +14,14 @@ const statusStyles = {
 
 export default function TopGames({ games }: Props) {
   const topFourLiveGames = games
-    // 1. SKIPPARE: Il filter butta nel cestino i 2 beta e i 2 maintenance.
-    // Rimangono solo i 6 giochi 'live'
+  
     .filter((game) => game.status === 'live')
-    
-    // 2. RIPESCARE I MIGLIORI: Li ordina dal più giocato al meno giocato
     .sort((a, b) => b.roundsPlayed - a.roundsPlayed)
-    
-    // 3. MOSTRARE 4 GIOCHI: Taglia la lista e prende i primi 4 assoluti
     .slice(0, 4)
 
   return (
     <div className="bg-[#0d1424] border border-[#1e2d45] rounded-xl p-5">
-      <p className="text-[10px] font-bold tracking-[0.12em] uppercase text-slate-600 mb-4">
+      <p className="text-[11px] font-bold tracking-[0.08em] uppercase text-slate-500 mb-4">
         Top Games by Rounds
       </p>
       

@@ -1,4 +1,3 @@
-// components/ui/KpiCard.tsx
 interface KpiCardProps {
   title: string
   value: string | number
@@ -17,6 +16,7 @@ export default function KpiCard({ title, value, change, trend, accent }: KpiCard
         {title}
       </p>
 
+      
       <p className="text-[26px] font-extrabold text-slate-100 tracking-tight font-mono leading-none [word-spacing:2px]">
         {value}
       </p>

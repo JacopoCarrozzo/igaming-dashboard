@@ -9,7 +9,7 @@ const CAMPAIGNS = [
 export default function GiftCodeCampaigns() {
   return (
     <div className="bg-[#0d1424] border border-[#1e2d45] rounded-xl p-5">
-      <p className="text-[10px] font-bold tracking-[0.12em] uppercase text-slate-600 mb-4">
+      <p className="text-[11px] font-bold tracking-[0.08em] uppercase text-slate-500 mb-4">
         GiftCode Campaigns
       </p>
       <ul className="flex flex-col gap-3">
