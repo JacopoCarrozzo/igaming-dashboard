@@ -19,14 +19,14 @@ export default function RecentActivity() {
       <ul className="flex flex-col gap-3">
         {ACTIVITY.map(({ color, text, highlight, time }, i) => (
           <li key={i} className="flex items-center gap-3">
-            <span className={`w-1.5 h-1.5 rounded-full shrink-0 ${color}`} />
-            <span className="text-[12px] font-bold text-slate-500 flex-1">
+            <span className={`w-2 h-2 rounded-full shrink-0 shadow-[0_0_8px] ${color}`} />
+            <span className="text-[13px] font-semibold text-slate-500 flex-1">
               {text}{' '}
               {highlight && (
                 <strong className="text-slate-200 font-semibold">{highlight}</strong>
               )}
             </span>
-            <span className="text-[11px] font-mono text-slate-700 shrink-0">{time}</span>
+            <span className="text-[13px] font-mono text-slate-500 shrink-0">{time}</span>
           </li>
         ))}
       </ul>

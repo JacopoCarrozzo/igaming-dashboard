@@ -16,7 +16,7 @@ export default function MarketBars() {
       <div className="flex flex-col gap-3">
         {MARKETS.map(({ label, pct, accent }) => (
           <div key={label} className="flex items-center gap-3">
-            <span className="text-[11px] font-semibold text-slate-400 w-16 shrink-0">
+            <span className="text-[13px] font-semibold text-slate-400 w-16 shrink-0">
               {label}
             </span>
             <div className="flex-1 h-1.5 bg-[#1e2d45] rounded-full overflow-hidden">

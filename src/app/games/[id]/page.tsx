@@ -25,7 +25,7 @@ export default async function GameDetailPage({ params }: { params: Promise<{ id:
       {/* Back */}
       <Link
         href="/games"
-        className="inline-flex items-center gap-1.5 text-[12px] font-bold text-slate-500 hover:text-emerald-400 transition-colors mb-6"
+        className="inline-flex items-center gap-1.5 text-[13px] font-bold text-slate-500 hover:text-emerald-400 transition-colors mb-5"
       >
         <i className="ti ti-arrow-left text-sm" aria-hidden="true" />
         Back to Games
@@ -39,9 +39,6 @@ export default async function GameDetailPage({ params }: { params: Promise<{ id:
             <h1 className="text-[22px] font-extrabold text-slate-100 tracking-tight">
               {game.title}
             </h1>
-            <p className="text-[12px] text-slate-600 font-mono mt-1">
-              ID: {game.id} · {game.category ?? 'Uncategorized'}
-            </p>
           </div>
         </div>
         <span className={`inline-flex px-3 py-1.5 rounded-full text-[11px] font-bold tracking-wide uppercase ${style.pill}`}>

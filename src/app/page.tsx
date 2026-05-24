@@ -31,7 +31,7 @@ export default async function DashboardOverview() {
           <h1 className="text-[22px] font-extrabold tracking-tight text-slate-100">
             Global Network Overview
           </h1>
-          <p className="mt-1 font-mono text-[12px] text-slate-600 [word-spacing:-2px]">
+          <p className="mt-1 font-mono text-[12px] text-slate-500 [word-spacing:-2px]">
             Last updated: {localTime}
           </p>
         </div>
@@ -40,10 +40,8 @@ export default async function DashboardOverview() {
         </span>
       </div>
 
-
-      <div className="mb-6 grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-4">
-            
-             <KpiCard
+      <div className="mb-6 grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-4">    
+        <KpiCard
           title="Active Games"
           value={games.length + 37}
           change="+4 this month"

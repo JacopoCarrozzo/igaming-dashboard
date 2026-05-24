@@ -25,7 +25,7 @@ export default async function PartnersPage() {
             {partners.length} operators · refreshes every 60s
           </p>
         </div>
-        <span className="bg-[#0d1424] border border-[#1e2d45] text-slate-400 text-[11px] font-bold font-mono px-3 py-1.5 rounded-full">
+        <span className="rounded-full border border-emerald-400/25 bg-emerald-400/10 px-3 py-1.5 font-mono text-[11px] font-bold text-emerald-400">
           {partners.filter(p => p.status === 'active').length} ACTIVE
         </span>
       </div>
@@ -42,11 +42,6 @@ export default async function PartnersPage() {
               {/* Card header */}
               <div className="flex items-start justify-between mb-4">
                 <div className="flex items-center gap-2.5">
-                  <div className="w-9 h-9 rounded-lg bg-slate-800 border border-[#1e2d45] flex items-center justify-center">
-                    <span className="text-[13px] font-extrabold text-slate-300">
-                      {partner.name.slice(0, 2).toUpperCase()}
-                    </span>
-                  </div>
                   <div>
                     <p className="text-[13px] font-bold text-slate-200">{partner.name}</p>
                     <p className="text-[11px] text-slate-600 font-mono">{partner.country ?? '—'}</p>
