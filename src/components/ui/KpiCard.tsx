@@ -12,6 +12,8 @@ export default function KpiCard({ title, value, change, trend, accent }: KpiCard
       
       <div className={`absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r ${accent}`} />
 
+
+
       <p className="text-[11px] font-bold tracking-[0.08em] uppercase text-slate-500 mb-2">
         {title}
       </p>

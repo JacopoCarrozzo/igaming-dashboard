@@ -11,8 +11,8 @@ export const revalidate = 60
 export default async function DashboardOverview() {
   const [games, partners] = await Promise.all([getGames(), getPartners()])
 
-  const activePartners = partners.filter(p => p.status === 'active').length
-  
+  const activePartners = partners.filter((p) => p.status === 'active').length
+
   const localTime = new Intl.DateTimeFormat('en-GB', {
     weekday: 'short',
     day: '2-digit',
@@ -20,47 +20,70 @@ export default async function DashboardOverview() {
     year: 'numeric',
     hour: '2-digit',
     minute: '2-digit',
-    timeZone: 'Europe/Rome'
+    timeZone: 'Europe/Rome',
   }).format(new Date())
 
   return (
     <div>
-
       {/* Header */}
-      <div className="flex items-start justify-between mb-8">
+      <div className="mb-8 flex items-start justify-between">
         <div>
-          <h1 className="text-[22px] font-extrabold text-slate-100 tracking-tight">
+          <h1 className="text-[22px] font-extrabold tracking-tight text-slate-100">
             Global Network Overview
           </h1>
-          <p className="text-[12px] text-slate-600 font-mono mt-1 [word-spacing:-2px]">
+          <p className="mt-1 font-mono text-[12px] text-slate-600 [word-spacing:-2px]">
             Last updated: {localTime}
           </p>
         </div>
-        <span className="bg-emerald-400/10 border border-emerald-400/25 text-emerald-400 text-[11px] font-bold font-mono px-3 py-1.5 rounded-full">
+        <span className="rounded-full border border-emerald-400/25 bg-emerald-400/10 px-3 py-1.5 font-mono text-[11px] font-bold text-emerald-400">
           ● LIVE
         </span>
       </div>
 
-      {/* KPI Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-3 mb-6">
-        <KpiCard title="Active Games" value={games.length + 37} change="+4 this month" trend="up"   accent="from-emerald-400 to-cyan-400" />
-        <KpiCard title="Total Rounds" value={`117,674\u2009M`} change="+12.3% vs last week" trend="up" accent="from-indigo-400 to-violet-400" />
-        <KpiCard title="Connected Partners" value={activePartners + 87} change="+17 integrations" trend="up" accent="from-amber-400 to-orange-400" />
-        <KpiCard title="Avg RTP" value={`96.2\u2009%`} change="-0.1% adjusted" trend="down" accent="from-rose-400 to-pink-400" />
+
+      <div className="mb-6 grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-4">
+            
+             <KpiCard
+          title="Active Games"
+          value={games.length + 37}
+          change="+4 this month"
+          trend="up"
+          accent="from-emerald-400 to-cyan-400"
+        />
+        <KpiCard
+          title="Total Rounds"
+          value={`117,674\u2009M`}
+          change="+12.3% vs last week"
+          trend="up"
+          accent="from-indigo-400 to-violet-400"
+        />
+        <KpiCard
+          title="Connected Partners"
+          value={activePartners + 87}
+          change="+17 integrations"
+          trend="up"
+          accent="from-amber-400 to-orange-400"
+        />
+        <KpiCard
+          title="Avg RTP"
+          value={`96.2\u2009%`}
+          change="-0.1% adjusted"
+          trend="down"
+          accent="from-rose-400 to-pink-400"
+        />
       </div>
 
       {/* Row 1 */}
-      <div className="grid grid-cols-1 xl:grid-cols-2 gap-3 mb-3">
-        <TopGames games={games}/>
+      <div className="mb-3 grid grid-cols-1 gap-3 xl:grid-cols-2">
+        <TopGames games={games} />
         <MarketBars />
       </div>
 
       {/* Row 2 */}
-      <div className="grid grid-cols-1 xl:grid-cols-2 gap-3">
+      <div className="grid grid-cols-1 gap-3 xl:grid-cols-2">
         <RecentActivity />
         <GiftCodeCampaigns />
       </div>
-
     </div>
   )
 }
