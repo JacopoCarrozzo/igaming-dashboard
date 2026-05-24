@@ -87,14 +87,14 @@ export default function GamesTable({ games }: { games: Game[] }) {
                     <span className={`w-2 h-2 rounded-full shrink-0 ${style.dot}`} />
                     <span className="text-[13px] font-semibold text-slate-200">{game.title}</span>
                   </div>
-                  <span className="text-[12px] text-slate-500 font-medium">{game.category ?? '—'}</span>
-                  <span className="text-[12px] font-mono text-emerald-400">{game.roundsPlayed.toLocaleString()}</span>
+                  <span className="text-[13px] text-slate-500 font-medium">{game.category ?? '—'}</span>
+                  <span className="text-[13px] font-mono text-emerald-400">{game.roundsPlayed.toLocaleString()}</span>
                   <span className={`inline-flex w-fit px-2.5 py-1 rounded-full text-[10px] font-bold tracking-wide uppercase ${style.pill}`}>
                     {game.status}
                   </span>
                   <Link
                     href={`/games/${game.id}`}
-                    className="text-[11px] font-bold text-slate-500 hover:text-emerald-400 transition-colors duration-150 flex items-center gap-1 justify-end"
+                    className="text-[13px] font-bold text-slate-500 hover:text-emerald-400 transition-colors duration-150 flex items-center gap-1 justify-end"
                   >
                     Details
                     <i className="ti ti-arrow-right text-sm" aria-hidden="true" />

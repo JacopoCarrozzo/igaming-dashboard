@@ -19,7 +19,7 @@ export default function GameSearch({ onSearchChange }: GameSearchProps) {
     <div className="mb-4">
       <input
         type="text"
-        placeholder="Filter games instantly..."
+        placeholder="Filter games "
         value={term}
         onChange={(e) => handleChange(e.target.value)}
         className="w-full max-w-sm bg-[#0d1424] border border-[#1e2d45] rounded-xl px-4 py-2.5 text-[13px] text-slate-500 placeholder-slate-600 focus:outline-none focus:border-emerald-400/50 transition-colors font-medium font-mono"

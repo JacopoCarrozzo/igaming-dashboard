@@ -1,12 +1,11 @@
-// src/app/partners/page.tsx
 import { getPartners } from '@/lib/api'
 
-export const revalidate = 60 // ISR — si aggiorna ogni 60 secondi
+export const revalidate = 60
 
 const statusStyles: Record<string, { pill: string; dot: string }> = {
   active:   { pill: 'bg-emerald-400/10 text-emerald-400 border border-emerald-400/20', dot: 'bg-emerald-400 shadow-[0_0_6px_#4ade80]' },
-  pending:  { pill: 'bg-amber-400/10 text-amber-400 border border-amber-400/20',       dot: 'bg-amber-400' },
-  inactive: { pill: 'bg-slate-500/10 text-slate-500 border border-slate-500/20',       dot: 'bg-slate-500' },
+  pending:  { pill: 'bg-amber-400/10 text-amber-400 border border-amber-400/20', dot: 'bg-amber-400' },
+  inactive: { pill: 'bg-slate-500/10 text-slate-500 border border-slate-500/20', dot: 'bg-slate-500' },
 }
 
 export default async function PartnersPage() {
@@ -21,9 +20,6 @@ export default async function PartnersPage() {
           <h1 className="text-[22px] font-extrabold text-slate-100 tracking-tight">
             Partners
           </h1>
-          <p className="text-[12px] text-slate-600 font-mono mt-1">
-            {partners.length} operators · refreshes every 60s
-          </p>
         </div>
         <span className="rounded-full border border-emerald-400/25 bg-emerald-400/10 px-3 py-1.5 font-mono text-[11px] font-bold text-emerald-400">
           {partners.filter(p => p.status === 'active').length} ACTIVE
@@ -43,8 +39,8 @@ export default async function PartnersPage() {
               <div className="flex items-start justify-between mb-4">
                 <div className="flex items-center gap-2.5">
                   <div>
-                    <p className="text-[13px] font-bold text-slate-200">{partner.name}</p>
-                    <p className="text-[11px] text-slate-600 font-mono">{partner.country ?? '—'}</p>
+                    <p className="text-[15px] font-bold text-slate-200">{partner.name}</p>
+                    <p className="text-[13px] text-slate-600 font-mono">{partner.country ?? '—'}</p>
                   </div>
                 </div>
                 <span className={`inline-flex px-2.5 py-1 rounded-full text-[10px] font-bold tracking-wide uppercase ${style.pill}`}>

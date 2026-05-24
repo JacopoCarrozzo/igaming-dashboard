@@ -17,7 +17,7 @@ export default function GiftCodeCampaigns() {
         {CAMPAIGNS.map(({ name, partner, claims }) => (
           <li key={name} className="flex items-center gap-3">
             <span className="text-[13px] font-semibold text-slate-200 flex-1">{name}</span>
-            <span className="text-[11px] text-slate-600 shrink-0">{partner}</span>
+            <span className="text-[11px] font-semibold text-slate-500 shrink-0">{partner}</span>
             <span className={`text-[12px] font-bold font-mono shrink-0 text-emerald-400`}>
               {claims.toLocaleString()}
             </span>
