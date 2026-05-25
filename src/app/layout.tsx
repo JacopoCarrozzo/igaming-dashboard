@@ -1,4 +1,3 @@
-// app/layout.tsx
 import './globals.css'
 import { DM_Mono, Syne } from 'next/font/google'
 import Sidebar from '@/components/ui/Sidebar'

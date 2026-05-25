@@ -1,9 +1,8 @@
-// src/app/games/[id]/page.tsx
 import { getGameById } from '@/lib/api'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 
-export const dynamic = 'force-dynamic' // SSR — dati freschi ad ogni richiesta
+export const dynamic = 'force-dynamic' 
 
 const statusStyles: Record<string, { pill: string; dot: string; label: string }> = {
   live:        { pill: 'bg-emerald-400/10 text-emerald-400 border border-emerald-400/20', dot: 'bg-emerald-400 shadow-[0_0_6px_#4ade80]', label: 'Live' },
@@ -21,8 +20,6 @@ export default async function GameDetailPage({ params }: { params: Promise<{ id:
 
   return (
     <div>
-
-      {/* Back */}
       <Link
         href="/games"
         className="inline-flex items-center gap-1.5 text-[13px] font-bold text-slate-500 hover:text-emerald-400 transition-colors mb-5"
@@ -31,7 +28,6 @@ export default async function GameDetailPage({ params }: { params: Promise<{ id:
         Back to Games
       </Link>
 
-      {/* Header */}
       <div className="flex items-start justify-between mb-8">
         <div className="flex items-center gap-3">
           <span className={`w-3 h-3 rounded-full shrink-0 ${style.dot}`} />
@@ -46,7 +42,6 @@ export default async function GameDetailPage({ params }: { params: Promise<{ id:
         </span>
       </div>
 
-      {/* KPI row */}
       <div className="grid grid-cols-3 gap-3 mb-6">
         {[
           { label: 'Rounds Played',  value: game.roundsPlayed.toLocaleString(), accent: 'from-emerald-400 to-cyan-400' },
@@ -61,7 +56,6 @@ export default async function GameDetailPage({ params }: { params: Promise<{ id:
         ))}
       </div>
 
-      {/* Details card */}
       <div className="bg-[#0d1424] border border-[#1e2d45] rounded-xl overflow-hidden">
         <div className="px-5 py-3 border-b border-[#1e2d45]">
           <span className="text-[11px] font-bold tracking-[0.1em] uppercase text-slate-600">

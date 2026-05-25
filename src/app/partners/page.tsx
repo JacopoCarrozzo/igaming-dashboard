@@ -13,8 +13,6 @@ export default async function PartnersPage() {
 
   return (
     <div>
-
-      {/* Header */}
       <div className="flex items-start justify-between mb-8">
         <div>
           <h1 className="text-[22px] font-extrabold text-slate-100 tracking-tight">
@@ -26,7 +24,6 @@ export default async function PartnersPage() {
         </span>
       </div>
 
-      {/* Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3">
         {partners.map((partner) => {
           const style = statusStyles[partner.status] ?? statusStyles.inactive

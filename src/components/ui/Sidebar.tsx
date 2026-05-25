@@ -1,4 +1,3 @@
-// components/ui/Sidebar.tsx
 'use client'
 
 import Link from 'next/link'
@@ -27,7 +26,6 @@ export default function Sidebar() {
   return (
     <aside className="w-[200px] bg-[#0d1424] border-r border-[#1e2d45] flex flex-col shrink-0">
 
-      {/* Logo */}
       <div className="px-5 py-5 border-b border-[#1e2d45]">
         <div className="text-[14px] font-extrabold tracking-[0.15em] text-emerald-400 uppercase">
           TaDa<span className="text-slate-100"> · B2B</span>
@@ -37,8 +35,7 @@ export default function Sidebar() {
         </div>
       </div>
 
-      {/* Nav */}
-      <nav className="flex flex-col mt-4 ">
+      <nav className="flex flex-col mt-4">
         {navItems.map((item) => (
           <NavItem key={item.href} {...item} active={pathname === item.href} />
         ))}
@@ -54,7 +51,6 @@ export default function Sidebar() {
         ))}
       </nav>
 
-      {/* Status */}
       <div className="mt-auto px-5 py-4 border-t border-[#1e2d45]">
         <div className="flex items-center gap-2">
           <span className="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_6px_#4ade80]" />

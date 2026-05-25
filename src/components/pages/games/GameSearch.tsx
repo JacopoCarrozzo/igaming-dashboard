@@ -1,8 +1,6 @@
-// components/ui/GameSearch.tsx
 'use client'
 
 import { useState } from 'react'
-
 interface GameSearchProps {
   onSearchChange: (value: string) => void
 }

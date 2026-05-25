@@ -7,9 +7,6 @@ const ACTIVITY = [
   { color: 'bg-rose-400',    text: 'Softswiss flagged', highlight: 'RTP deviation', time: '3h ago' },
 ]
 
-
-
-
 export default function RecentActivity() {
   return (
     <div className="bg-[#0d1424] border border-[#1e2d45] rounded-xl p-5">

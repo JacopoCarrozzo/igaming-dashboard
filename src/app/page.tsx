@@ -1,4 +1,3 @@
-// app/page.tsx
 import { getGames, getPartners } from '@/lib/api'
 import KpiCard from '@/components/ui/KpiCard'
 import TopGames from '@/components/pages/overview/TopGames'
@@ -71,13 +70,11 @@ export default async function DashboardOverview() {
         />
       </div>
 
-      {/* Row 1 */}
       <div className="mb-3 grid grid-cols-1 gap-3 xl:grid-cols-2">
         <TopGames games={games} />
         <MarketBars />
       </div>
 
-      {/* Row 2 */}
       <div className="grid grid-cols-1 gap-3 xl:grid-cols-2">
         <RecentActivity />
         <GiftCodeCampaigns />

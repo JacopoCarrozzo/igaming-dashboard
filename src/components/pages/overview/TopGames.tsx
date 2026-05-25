@@ -1,5 +1,4 @@
 import { Game } from '@/types'
-
 interface Props {
   games: Game[]
 }

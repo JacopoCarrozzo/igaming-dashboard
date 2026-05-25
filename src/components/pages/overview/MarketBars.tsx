@@ -1,4 +1,3 @@
-// components/ui/overview/MarketBars.tsx
 const MARKETS = [
   { label: 'Brazil',  pct: 37, accent: 'from-emerald-400 to-cyan-400' },
   { label: 'UK',      pct: 22, accent: 'from-indigo-400 to-violet-400' },

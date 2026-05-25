@@ -1,4 +1,3 @@
-// components/ui/GamesTable.tsx
 'use client'
 
 import Link from 'next/link'
@@ -23,47 +22,7 @@ export default function GamesTable({ games }: { games: Game[] }) {
     <>
       <GameSearch onSearchChange={setSearch} />
 
-      {/* ─── MOBILE: card list ─── */}
-      <ul className="flex flex-col gap-2 mt-4 sm:hidden">
-        {filteredGames.length > 0 ? (
-          filteredGames.map((game) => {
-            const style = statusStyles[game.status] ?? statusStyles.maintenance
-            return (
-              <li
-                key={game.id}
-                className="bg-[#0d1424] border border-[#1e2d45] rounded-xl px-4 py-3 flex items-center gap-3"
-              >
-                <span className={`w-2 h-2 rounded-full shrink-0 ${style.dot}`} />
-                <div className="flex-1 min-w-0">
-                  <p className="text-[13px] font-semibold text-slate-200 truncate">
-                    {game.title}
-                  </p>
-                  <p className="text-[11px] text-slate-600 font-mono mt-0.5">
-                    {game.category ?? '—'} · {game.roundsPlayed.toLocaleString()} rounds
-                  </p>
-                </div>
-                <span className={`inline-flex px-2 py-0.5 rounded-full text-[10px] font-bold tracking-wide uppercase shrink-0 ${style.pill}`}>
-                  {game.status}
-                </span>
-                <Link
-                  href={`/games/${game.id}`}
-                  className="text-slate-500 hover:text-emerald-400 transition-colors shrink-0"
-                  aria-label="View details"
-                >
-                  <i className="ti ti-arrow-right text-base" aria-hidden="true" />
-                </Link>
-              </li>
-            )
-          })
-        ) : (
-          <li className="px-5 py-8 text-center text-[12px] text-slate-600 font-mono">
-            No titles found matching your search.
-          </li>
-        )}
-      </ul>
-
-      {/* ─── DESKTOP: tabella ─── */}
-      <div className="hidden sm:block bg-[#0d1424] border border-[#1e2d45] rounded-xl overflow-hidden mt-4">
+      <div className="bg-[#0d1424] border border-[#1e2d45] rounded-xl overflow-hidden mt-4">
         <div className="grid grid-cols-[2fr_1fr_1fr_1fr_80px] gap-4 px-5 py-3 border-b border-[#1e2d45]">
           {['Game', 'Category', 'Rounds Played', 'Status', ''].map((h) => (
             <span key={h} className="text-[10px] font-bold tracking-[0.1em] uppercase text-slate-600">

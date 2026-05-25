@@ -1,7 +1,5 @@
-// src/types/index.ts
 export type GameStatus = 'live' | 'beta' | 'maintenance'
 export type PartnerStatus = 'active' | 'pending' | 'inactive'
-
 export interface Game {
   id: string
   title: string
@@ -12,7 +10,6 @@ export interface Game {
   markets?: number | string
   launchDate?: string
 }
-
 export interface Partner {
   id: string
   name: string
@@ -21,7 +18,6 @@ export interface Partner {
   gamesCount?: number
   monthlyRounds?: number
 }
-
 export interface KpiStats {
   activeGames: number
   totalRounds: number
