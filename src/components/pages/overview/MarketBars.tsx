@@ -1,10 +1,10 @@
 // components/ui/overview/MarketBars.tsx
 const MARKETS = [
-  { label: 'Brazil',  pct: 82, accent: 'from-emerald-400 to-cyan-400' },
-  { label: 'UK',      pct: 61, accent: 'from-indigo-400 to-violet-400' },
-  { label: 'Germany', pct: 47, accent: 'from-amber-400 to-orange-400' },
-  { label: 'Sweden',  pct: 38, accent: 'from-rose-400 to-pink-400' },
-  { label: 'Greece',  pct: 22, accent: 'from-blue-400 to-blue-600' },
+  { label: 'Brazil',  pct: 37, accent: 'from-emerald-400 to-cyan-400' },
+  { label: 'UK',      pct: 22, accent: 'from-indigo-400 to-violet-400' },
+  { label: 'Germany', pct: 20, accent: 'from-amber-400 to-orange-400' },
+  { label: 'Italy',   pct: 12, accent: 'from-rose-400 to-pink-400' },
+  { label: 'Greece',  pct: 8, accent: 'from-blue-400 to-blue-600' },
 ]
 
 export default function MarketBars() {

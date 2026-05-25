@@ -1,7 +1,8 @@
 import { Game, Partner } from '@/types'
 
-const BASE_URL = 'https://jsonplaceholder.typicode.com'
-
+const BASE_URL = process.env.API_BASE_URL
+if (!BASE_URL) throw new Error('API_BASE_URL is not defined in .env.local')
+  
 type RawPost = {
   id: number
   title: string

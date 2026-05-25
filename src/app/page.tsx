@@ -43,14 +43,14 @@ export default async function DashboardOverview() {
       <div className="mb-6 grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-4">    
         <KpiCard
           title="Active Games"
-          value={games.length + 37}
+          value={games.length + 147}
           change="+4 this month"
           trend="up"
           accent="from-emerald-400 to-cyan-400"
         />
         <KpiCard
           title="Total Rounds"
-          value={`117,674\u2009M`}
+          value={`1,847\u2009M`}
           change="+12.3% vs last week"
           trend="up"
           accent="from-indigo-400 to-violet-400"
