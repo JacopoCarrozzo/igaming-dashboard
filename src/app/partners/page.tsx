@@ -24,7 +24,7 @@ export default async function PartnersPage() {
         </span>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3">
+      <div className="grid grid-cols-4 gap-3">
         {partners.map((partner) => {
           const style = statusStyles[partner.status] ?? statusStyles.inactive
           return (
@@ -32,7 +32,7 @@ export default async function PartnersPage() {
               key={partner.id}
               className="bg-[#0d1424] border border-[#1e2d45] rounded-xl p-5 hover:border-slate-600 transition-colors duration-150"
             >
-              {/* Card header */}
+              
               <div className="flex items-start justify-between mb-4">
                 <div className="flex items-center gap-2.5">
                   <div>
@@ -45,7 +45,6 @@ export default async function PartnersPage() {
                 </span>
               </div>
 
-              {/* Stats row */}
               <div className="grid grid-cols-2 gap-3 pt-4 border-t border-[#0f172a]">
                 <div>
                   <p className="text-[10px] font-bold uppercase tracking-[0.08em] text-slate-600 mb-1">

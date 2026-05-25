@@ -1,6 +1,6 @@
 # TaDa B2B — Operator Portal
 
-A production-ready B2B dashboard for iGaming operators to monitor game performance,
+A B2B dashboard for iGaming operators to monitor game performance,
 manage partner integrations, and configure platform settings across global markets.
 
 Built with Next.js 16 · React 19 · TypeScript · Tailwind CSS v4
@@ -13,7 +13,7 @@ Built with Next.js 16 · React 19 · TypeScript · Tailwind CSS v4
 
 | Layer | Technology |
 |-------|-----------|
-| Framework | Next.js 16 — App Router |
+| Framework | Next.js 16 |
 | Language | TypeScript |
 | Styling | Tailwind CSS v4 |
 | Deploy | Vercel |

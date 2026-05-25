@@ -24,7 +24,7 @@ export default async function DashboardOverview() {
 
   return (
     <div>
-      {/* Header */}
+
       <div className="mb-8 flex items-start justify-between">
         <div>
           <h1 className="text-[22px] font-extrabold tracking-tight text-slate-100">
@@ -39,7 +39,7 @@ export default async function DashboardOverview() {
         </span>
       </div>
 
-      <div className="mb-6 grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-4">    
+      <div className="mb-6 grid grid-cols-4 gap-3 ">    
         <KpiCard
           title="Active Games"
           value={games.length + 147}
@@ -70,12 +70,12 @@ export default async function DashboardOverview() {
         />
       </div>
 
-      <div className="mb-3 grid grid-cols-1 gap-3 xl:grid-cols-2">
+      <div className="mb-3 grid grid-cols-2 gap-3">
         <TopGames games={games} />
         <MarketBars />
       </div>
 
-      <div className="grid grid-cols-1 gap-3 xl:grid-cols-2">
+      <div className="grid grid-cols-2 gap-3">
         <RecentActivity />
         <GiftCodeCampaigns />
       </div>
