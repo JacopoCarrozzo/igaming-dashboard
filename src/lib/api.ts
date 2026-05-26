@@ -39,7 +39,7 @@ export async function getGames(): Promise<Game[]> {
 
 export async function getGameById(id: string): Promise<Game | null> {
   const res = await fetch(`${BASE_URL}/posts/${id}`, {
-    cache: 'no-store', // SSR — sempre fresco
+    cache: 'no-store', 
   })
   if (!res.ok) return null
 
