@@ -28,7 +28,7 @@ export default function Sidebar() {
 
       <div className="px-5 py-5 border-b border-[#1e2d45]">
         <div className="text-[14px] font-extrabold tracking-[0.15em] text-emerald-400 uppercase">
-          TaDa<span className="text-slate-100"> · B2B</span>
+          B2B<span className="text-slate-100"> · PLATFORM</span>
         </div>
         <div className="text-[10px] text-slate-500 tracking-[0.1em] mt-1">
           OPERATOR PORTAL

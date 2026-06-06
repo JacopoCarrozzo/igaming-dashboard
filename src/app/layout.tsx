@@ -7,7 +7,7 @@ const syne = Syne({ subsets: ['latin'], variable: '--font-syne' })
 const mono = DM_Mono({ subsets: ['latin'], weight: ['400','500'], variable: '--font-mono' })
 
 export const metadata: Metadata = {
-  title: 'TaDa B2B Portal',
+  title: ' B2B PLATFORM',
   description: 'Operator Dashboard',
 }
 
